@@ -15,34 +15,74 @@ function getComputerChoice() {
 function singleRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
+    // console.log("Player selected " + playerSelection + " and computer selected " + computerSelection)
     if (computerSelection == "rock" && playerSelection == "scissors") {
-        return "You lose! Rock beats Scissors";
+        return "You lose!";
     } else if (computerSelection == "rock" && playerSelection == "paper") {
-        return "You win! Paper beats Rock";
+        return "You win!";
     } else if (computerSelection == "paper" && playerSelection == "scissors") {
-        return "You win! Scissors beats Paper";
+        return "You win!";
     } else if (computerSelection == "paper" && playerSelection == "rock") {
-        return "You lose! Paper beats Rock";
+        return "You lose!";
     } else if (computerSelection == "scissors" && playerSelection =="paper") {
-        return "You lose! Scissors beats Paper";
+        return "You lose!";
     } else if (computerSelection == "scissors" && playerSelection == "rock") {
-        return "You win! Rock beats Scissors";
+        return "You win!";
     } else {
         return "Tie"; 
     }
 }
 
 function game() {
-    countResult = 0
+    UserWin = 0;
+    ComputerWin = 0;
     selection = prompt("choose either, Rock,Paper,Scissors");
     result = singleRound(selection,getComputerChoice());
     console.log(result)
     if (result == "You win!") {
-        return countResult = 1
+        UserWin += 1;
+    } else if (result == "You lose!") {
+        ComputerWin += 1;
     }
     selection = prompt("choose either, Rock,Paper,Scissors");
     result = singleRound(selection,getComputerChoice());
     console.log(result)
-}
+    if (result == "You win!") {
+        UserWin += 1;
+    } else if (result == "You lose!") {
+        ComputerWin += 1;
+    }
+    selection = prompt("choose either, Rock,Paper,Scissors");
+    result = singleRound(selection,getComputerChoice());
+    console.log(result)
+    if (result == "You win!") {
+        UserWin += 1;
+    } else if (result == "You lose!") {
+        ComputerWin += 1;
+    }
+    selection = prompt("choose either, Rock,Paper,Scissors");
+    result = singleRound(selection,getComputerChoice());
+    console.log(result)
+    if (result == "You win!") {
+        UserWin += 1;
+    } else if (result == "You lose!") {
+        ComputerWin += 1;
+    }
+    selection = prompt("choose either, Rock,Paper,Scissors");
+    result = singleRound(selection,getComputerChoice());
+    console.log(result)
+    if (result == "You win!") {
+        UserWin += 1;
+    } else if (result == "You lose!") {
+        ComputerWin += 1;
+    }
+    if (UserWin > ComputerWin){
+        return "You won more rounds";
+    } else if (UserWin < ComputerWin) {
+        return "You lost more rounds";
+    } else {
+        return "Tie"
+    }
+}   
 
-game() 
+console.log(game()) 
