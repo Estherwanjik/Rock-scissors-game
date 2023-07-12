@@ -31,4 +31,18 @@ function singleRound(playerSelection, computerSelection) {
         return "Tie"; 
     }
 }
-console.log(singleRound("roCK",getComputerChoice()))
+
+function game() {
+    countResult = 0
+    selection = prompt("choose either, Rock,Paper,Scissors");
+    result = singleRound(selection,getComputerChoice());
+    console.log(result)
+    if (result == "You win!") {
+        return countResult = 1
+    }
+    selection = prompt("choose either, Rock,Paper,Scissors");
+    result = singleRound(selection,getComputerChoice());
+    console.log(result)
+}
+
+game() 
