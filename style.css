@@ -1,0 +1,127 @@
+
+html {
+    background-color:brown;
+
+}
+/* fitting into one page */
+.flex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    padding-top: 18px;
+    flex-wrap: nowrap;    
+}
+/* heading */
+h1 {
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold';
+    font-size: 65px;
+    font-weight: bolder;
+    margin: 18px;
+}
+h2 {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 18px;
+}
+h3 {
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+/* outputs:playerscore,computerscore,finalscore */
+#roundResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+    width: 200px;
+    height: 100px;
+    border: 5px solid blue;
+    font-weight: bold;
+    background-color: rosybrown;
+}
+.scores {
+    display: flex;
+    flex-direction: row;
+    
+}
+.scores div {
+    font-size: 20px;
+    font-weight: bolder;
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid blue;
+    margin-top: 3px;
+    margin-bottom: 18px;
+    margin-right: 6px;
+
+}
+/* buttons */
+.optionButton button {
+    background-color: lightblue;
+    border: 5px solid darkblue;
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 30px;
+    
+}
+#reset {
+    width: 130px;
+    height: 50px;
+    margin-top: 20px;
+    background-color: rosybrown;
+    color: black;
+    font-size: 20px;
+    border: 3px solid darkblue;
+}
+/* Labels */
+#resultLabel {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: rosybrown;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+#playerLabel{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    padding-left: 25px;
+    padding-right: 45px;
+    margin-top: 50px;
+    height: 200px;
+    width: 200px;
+    background-color: rosybrown;
+    
+
+}
+#computerLabel{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    padding-left: 20;
+    padding-right: 45px;
+    height: 200px; 
+    width: 200px;
+    margin-top: 50px;
+    background-color: rosybrown;
+}

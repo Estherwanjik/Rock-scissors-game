@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <script src ="game.js"></script>
-    
+    <div class="flex">
+        <h1>ROCK PAPER SCISSORS</h1>
+        <h2>Chose Your Weapon!</h2>
+        <h3>First to score 5 points wins!</h3>
+
+
+        <div class="optionButton">
+            <button id="0">Rock</button>
+            <button id="1">Paper</button>
+            <button id="2">Scissors</button>
+        </div>
+
+
+        <div class="Labels">
+            <span id="playerLabel">Player scores</span>
+            <span id="computerLabel">Computer scores</span>
+        </div>
+
+
+        <div class="Scores">
+            <div id="playerScores"></div>
+            <div id="computerScores"></div>
+        </div>
+
+    <div><span id="resultsLabel">Results</span></div>
+
+        <div id="roundResults"></div>
+
+    <div>
+        <button id="reset">PLAY AGAIN</button>
+    </div>
+
+    </div>
 </body>
+    <!-- <script src ="game.js"></script> -->
 </html>
