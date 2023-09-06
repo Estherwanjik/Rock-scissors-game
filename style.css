@@ -35,7 +35,7 @@ h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 18px;
+    margin-bottom: 28px;
 }
 /* outputs:playerscore,computerscore,finalscore */
 #roundResults {
@@ -52,36 +52,73 @@ h3 {
     margin-top: 10px;
 
 }
-.scores {
-    display: flex; 
-    flex-direction: row; 
-    
+.box {
+   display: flex; 
+   flex-direction: row;
+   gap: 50px;
 }
-.scores div {
+.player {
+    flex-direction: row;
+    display: flex;
+    font-weight: bold;
+}
+
+.computer {
+    flex-direction: row;
+    display: flex;
+    font-weight: bold;
+}
+
+.scores {
     font-size: 20px;
     font-weight: bolder;
-    width: 200px;
+    width: 250px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid darkblue;
+    border: 3px solid darkblue;
     margin-top: 3px;
-    margin-bottom: 18px;
-    margin-right: 6px;
+    margin-bottom: 12px;
+    background-color: rosybrown;
+}
+
+
+ 
+/*   .scores {
+    display: flex; 
+    flex-direction: row; 
+
+} */
+
+/* .scores div {
+    font-size: 20px;
+    font-weight: bolder;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid darkblue;
+    margin-top: 3px;
+    margin-bottom: 12px;
     background-color: rosybrown;
 
-}
+}  */ 
 /* buttons */
 .optionButton button {
     background-color: lightblue;
     border: 5px solid darkblue;
-    width: 150px;
-    height: 50px;
+    width: 170px;
+    height: 70px;
     font-size: 30px;
     font-weight: bold;
     color: black;
     margin-bottom: 30px;
+    transition:all 0.89s;
+
+    
+
     
 }
 #reset {
@@ -102,8 +139,8 @@ h3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
 }
-#playerLabel{
-    font-size: 18px;
+/* #playerLabel{
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -111,15 +148,13 @@ h3 {
     margin-top: 100px;
     height: 100%;
     width: 100%;
-    
     padding: 10px;
     margin-bottom: 40px;
-
-
-
+    margin-right: 50px;
 }
-#computerLabel{
-    font-size: 18px;
+ */ 
+/*   #computerLabel{
+    font-size: 25px;
     font-weight: bold;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
@@ -131,4 +166,5 @@ h3 {
     margin-bottom: 70px;
     margin-right: 5px;
     padding: 10px;
-}
+} */
+ 
