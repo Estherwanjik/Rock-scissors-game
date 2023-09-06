@@ -4,22 +4,24 @@ html {
 
 }
 /* fitting into one page */
-.flex {
+.Container {
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%;
     align-items: center;
     padding-top: 18px;
-    flex-wrap: nowrap;    
+    flex-wrap: nowrap;  
 }
 /* heading */
 h1 {
     color: black;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold';
-    font-size: 65px;
-    font-weight: bolder;
-    margin: 18px;
+    font-size: 75px;
+    font-weight: bold;
+    margin: 28px;
+    justify-content: center;
+    text-align: center;
 }
 h2 {
     color: black;
@@ -42,15 +44,17 @@ h3 {
     align-items: center;
     font-size: 25px;
     text-align: center;
-    width: 200px;
-    height: 100px;
-    border: 5px solid blue;
-    font-weight: bold;
+    width: 150px;
+    height: 150px;
+    border: 5px solid darkblue;
+    font-weight: bolder;
     background-color: rosybrown;
+    margin-top: 10px;
+
 }
 .scores {
-    display: flex;
-    flex-direction: row;
+    display: flex; 
+    flex-direction: row; 
     
 }
 .scores div {
@@ -61,10 +65,11 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 5px solid blue;
+    border: 5px solid darkblue;
     margin-top: 3px;
     margin-bottom: 18px;
     margin-right: 6px;
+    background-color: rosybrown;
 
 }
 /* buttons */
@@ -90,7 +95,7 @@ h3 {
 }
 /* Labels */
 #resultLabel {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
     color: rosybrown;
@@ -98,30 +103,32 @@ h3 {
 
 }
 #playerLabel{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: black;
-    padding-left: 25px;
-    padding-right: 45px;
-    margin-top: 50px;
-    height: 200px;
-    width: 200px;
-    background-color: rosybrown;
+    margin-top: 100px;
+    height: 100%;
+    width: 100%;
     
+    padding: 10px;
+    margin-bottom: 40px;
+
+
 
 }
 #computerLabel{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: black;
-    padding-left: 20;
-    padding-right: 45px;
-    height: 200px; 
-    width: 200px;
+    height: 100%; 
+    width: 100%;
     margin-top: 50px;
-    background-color: rosybrown;
+
+    margin-bottom: 70px;
+    margin-right: 5px;
+    padding: 10px;
 }
