@@ -8,39 +8,45 @@
     <!-- <script src ="game.js" defer></script> -->
 </head>
 <body>
-    <div class="Container">
-        <h1>ROCK PAPER SCISSORS</h1>
-        <h2>Choose Your Weapon!</h2>
-        <h3>First to score 5 points wins!</h3>
+    <!-- <div class="container" id="startcontainer"> -->
+        <div class="startcontainer">
+            <h1 id="Title 1"></h1>
+            <h2 id="Title 2"></h2>
+
+        </div>    
+  
+        <div class="gamecontainer">
+            <div class="box">
+                    <div class="player">
+                        <span class="Labels" id="playerLabel">Player scores</span>
+                        <div class="scores" id="playerScore"></div>
+                    </div>
+
+                    <div class="computer">
+                        <div class="scores" id="computerScore"></div>
+                        <span class="Labels" id="computerLabel">Computer scores</span>
+                    </div>
+            </div>
+            <h3>Choose Your Weapon!</h3>
 
 
-        <div class="optionButton">
-            <button id="0">Rock</button>
-            <button id="1">Paper</button>
-            <button id="2">Scissors</button>
+            <div class="optionButton">
+                <button id="0">Rock</button>
+                <button id="1">Paper</button>
+                <button id="2">Scissors</button>
+            </div>
+        </div>   
+
+        <div class="bottomcontainer">
+            <div><span id="resultsLabel">Results</span></div>
+
+                <div id="roundResults"></div>
+
+            <div>
+                <button id="reset">PLAY AGAIN</button>
+          
         </div>
-
-
-        <div class="Labels">
-            <span id="playerLabel">Player scores</span>
-            <span id="computerLabel">Computer scores</span>
-        </div>
-
-
-        <div class="scores">
-            <div id="playerScore"></div>
-            <div id="computerScore"></div>
-        </div>
-
-    <div><span id="resultsLabel">Results</span></div>
-
-        <div id="roundResults"></div>
-
-    <div>
-        <button id="reset">PLAY AGAIN</button>
-    </div>
-
-    </div>
+   
 </body>
     <script src ="game.js"></script>
 </html>
