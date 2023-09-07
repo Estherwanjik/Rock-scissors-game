@@ -75,9 +75,60 @@ function singleRound(e) {
     checkWinner();
 }
 
-function startGame() {
+async function startGame() {
+    hidegamecontainer();
+    hidebottomcontainer();
+    writer(0, "Title 1", "Rock Paper Scissors", 100);
+    await sleep(1700);
+    writer(0, "Title 2", "First to  score 5 points wins!", 100);
+    await sleep(3000);
+    hidestartcontainer();
     playerPoints.textContent = playerScore;
     computerPoints.textContent = computerScore;
 }
 
 startGame()
+
+async function writer(position, id, text, speed) {
+    while (position < text.length) {
+        document.getElementById(id).innerHTML += text.charAt(position);
+        position++;
+        await sleep(speed);
+        console.log(position);
+        //setTimeout(writer, speed, position, id, text, speed);
+    }
+}
+
+
+function sleep(speed){
+    return new Promise((res)=>{
+        setTimeout(()=>{
+            res();} , speed);});
+}
+function hidestartcontainer() {
+    const startcontainer = document.querySelector('.startcontainer');
+    startcontainer.style.opacity = 0;
+    startcontainer.style.transform = 'scale(0)'
+    startcontainer.style.display = 'block';
+    // startcontainer.style.display = 'none';
+ /*    window.setTimeout(function(){
+        startcontainer.style.display = 'none';
+    }, 700);
+    setTimeout(() => { writer(); },1000); */
+}  
+
+
+function hidegamecontainer() {
+    const gamecontainer = document.querySelector('.gamecontainer');
+    gamecontainer.style.opacity = 0;
+    gamecontainer.style.transform = 'scale(0)';
+    gamecontainer.style.display = 'none';
+    //bottomcontainer.style.display = 'block';
+}
+function hidebottomcontainer() {
+    const bottomcontainer = document.querySelector('.bottomcontainer');
+    bottomcontainer.style.opacity = 0;
+    bottomcontainer.style.transform = 'scale(0)';
+    bottomcontainer.style.display = 'none';
+
+}
