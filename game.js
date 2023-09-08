@@ -26,18 +26,23 @@ let computerScore = 0;
 
 function checkWinner() {
     if (computerScore == 5) {
-        roundResults.textContent = 'You lost the game to the computer!';
-        roundResults.style.color = 'red';
+        hidegamecontainer();
+        revealbottomcontainer();
+        finalResults.textContent = 'You lost the game to the computer!';
+        finalResults.style.color = 'red';
         optionButton.forEach(button => {
             button.removeEventListener('click', singleRound);
         });
     }else if (playerScore == 5) {
-        roundResults.textContent = 'You won the game!';
-        roundResults.style.color = 'green';
+        hidegamecontainer();
+        revealbottomcontainer();
+        finalResults.textContent = 'You won the game!';
+        finalResults.style.color = 'green';
         optionButton.forEach(button => {
             button.removeEventListener('click', singleRound);
         });
     }
+   
 }
 
 function resetGame() {
@@ -83,6 +88,7 @@ async function startGame() {
     writer(0, "Title 2", "First to  score 5 points wins!", 100);
     await sleep(3000);
     hidestartcontainer();
+    revealgamecontainer();
     playerPoints.textContent = playerScore;
     computerPoints.textContent = computerScore;
 }
@@ -110,25 +116,34 @@ function hidestartcontainer() {
     startcontainer.style.opacity = 0;
     startcontainer.style.transform = 'scale(0)'
     startcontainer.style.display = 'block';
-    // startcontainer.style.display = 'none';
- /*    window.setTimeout(function(){
-        startcontainer.style.display = 'none';
-    }, 700);
-    setTimeout(() => { writer(); },1000); */
+   
 }  
 
 
 function hidegamecontainer() {
     const gamecontainer = document.querySelector('.gamecontainer');
-    gamecontainer.style.opacity = 0;
-    gamecontainer.style.transform = 'scale(0)';
+     //gamecontainer.style.opacity = 0;
+    //gamecontainer.style.transform = 'scale(0)'; 
     gamecontainer.style.display = 'none';
     //bottomcontainer.style.display = 'block';
 }
 function hidebottomcontainer() {
     const bottomcontainer = document.querySelector('.bottomcontainer');
-    bottomcontainer.style.opacity = 0;
-    bottomcontainer.style.transform = 'scale(0)';
+    // bottomcontainer.style.opacity = 0;
+     //bottomcontainer.style.transform = 'scale(0)';
     bottomcontainer.style.display = 'none';
 
+}
+function revealgamecontainer() {
+    const gamecontainer = document.querySelector('.gamecontainer');
+     //gamecontainer.style.opacity = 0;
+    //gamecontainer.style.transform = 'scale(0)'; 
+    gamecontainer.style.display = 'block';
+   
+}
+function revealbottomcontainer() {
+    const bottomcontainer = document.querySelector('.bottomcontainer');
+    // bottomcontainer.style.opacity = 0;
+     //bottomcontainer.style.transform = 'scale(0)';
+    bottomcontainer.style.display = 'block';
 }

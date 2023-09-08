@@ -1,18 +1,9 @@
 
-html {
+ html {
     background-color:brown;
 
-}
-/* fitting into one page */
-.Container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    padding-top: 18px;
-    flex-wrap: nowrap;  
-}
+} 
+
 /* heading */
 h1 {
     color: black;
@@ -29,44 +20,73 @@ h2 {
     font-size: 50px;
     font-weight: bold;
     margin: 18px;
+    text-align: center;
 }
 h3 {
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 40px;
-    font-weight: bold;
-    margin-bottom: 28px;
+    font-size: 50px;
+    font-weight: bolder;
+    margin-bottom: 58px;
+    padding-left: 120px;
+    justify-content: center;
+    align-items: center;
+
 }
+   /*  fitting containers */
+.startcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+.gamecontainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.bottomcontainer {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  
+}
+
 /* outputs:playerscore,computerscore,finalscore */
-#roundResults {
+#finalResults {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 100px;
     text-align: center;
-    width: 150px;
-    height: 150px;
-    border: 5px solid darkblue;
-    font-weight: bolder;
-    background-color: rosybrown;
-    margin-top: 10px;
+  
 
 }
 .box {
    display: flex; 
    flex-direction: row;
    gap: 50px;
+  
 }
 .player {
     flex-direction: row;
     display: flex;
     font-weight: bold;
+    font-size: 28px;
+  
 }
 
 .computer {
     flex-direction: row;
     display: flex;
     font-weight: bold;
+    font-size: 28px;
+
 }
 
 .scores {
@@ -83,88 +103,53 @@ h3 {
     background-color: rosybrown;
 }
 
-
- 
-/*   .scores {
-    display: flex; 
-    flex-direction: row; 
-
-} */
-
-/* .scores div {
-    font-size: 20px;
-    font-weight: bolder;
-    width: 250px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 3px solid darkblue;
-    margin-top: 3px;
-    margin-bottom: 12px;
-    background-color: rosybrown;
-
-}  */ 
-/* buttons */
 .optionButton button {
-    background-color: lightblue;
+    background-color: rosybrown;
     border: 5px solid darkblue;
-    width: 170px;
-    height: 70px;
+    width: 200px;
+    height: 50px;
     font-size: 30px;
     font-weight: bold;
     color: black;
     margin-bottom: 30px;
-    transition:all 0.89s;
+    transition:all 0.89s ease-in; 
+    padding:auto;
+    justify-content: center;
+    align-items: center;
+    transform: translate(1%, -1%);
+    margin-left: 60px;
 
-    
-
-    
 }
+
+
 #reset {
-    width: 130px;
-    height: 50px;
+    width: 200px;
+    height: 120px;
     margin-top: 20px;
     background-color: rosybrown;
     color: black;
-    font-size: 20px;
+    font-size: 50px;
     border: 3px solid darkblue;
+    justify-content: center;
+    align-items: center;
+     margin-left: 250px; 
+    border-radius: 4cap;
+    
+
 }
-/* Labels */
-#resultLabel {
+#roundResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 20px;
-    font-weight: bold;
     text-align: center;
-    color: rosybrown;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+    height: 100px;
+    width: 150px;
+    border: 5px solid darkblue;
+    margin-top: 80px; 
+    margin-left: 300px;
+    background-color: rosybrown;
+  
 }
-/* #playerLabel{
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    margin-top: 100px;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 40px;
-    margin-right: 50px;
-}
- */ 
-/*   #computerLabel{
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: black;
-    height: 100%; 
-    width: 100%;
-    margin-top: 50px;
 
-    margin-bottom: 70px;
-    margin-right: 5px;
-    padding: 10px;
-} */
- 
+
