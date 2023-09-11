@@ -28,7 +28,8 @@ function checkWinner() {
     if (computerScore == 5) {
         hidegamecontainer();
         revealbottomcontainer();
-        finalResults.textContent = 'You lost the game to the Warrior!';
+        playSound();
+        finalResults.textContent = 'You lost the fight to the Warrior!';
         finalResults.style.color = 'red';
         optionButton.forEach(button => {
             button.removeEventListener('click', singleRound);
@@ -36,7 +37,8 @@ function checkWinner() {
     }else if (playerScore == 5) {
         hidegamecontainer();
         revealbottomcontainer();
-        finalResults.textContent = 'You won the game!';
+        playSound();
+        finalResults.textContent = 'You won the fight!';
         finalResults.style.color = 'green';
         optionButton.forEach(button => {
             button.removeEventListener('click', singleRound);
@@ -86,8 +88,8 @@ async function startGame() {
     writer(0, "Title 1", "Rungu Shield Spear", 100);
     await sleep(1700);
     writer(0, "Title 2", "First to  score 5 points wins!", 100);
-    await sleep(3000);
-    writer(0, "Title 3", "Do you have what it takes to fight a Maasai warrior??", 100);
+    await sleep(3200);
+    writer(0, "Title 3", "Do you have what it takes to fight a Maasai warrior?", 100);
     await sleep(6100)
     hidestartcontainer();
     revealgamecontainer();
@@ -102,7 +104,6 @@ async function writer(position, id, text, speed) {
         document.getElementById(id).innerHTML += text.charAt(position);
         position++;
         await sleep(speed);
-        console.log(position);
     }
 }
 
@@ -136,4 +137,8 @@ function revealgamecontainer() {
 function revealbottomcontainer() {
     const bottomcontainer = document.querySelector('.bottomcontainer');
     bottomcontainer.style.display = 'block';
+}
+function playSound() {
+    let startgame= new Audio("startgamesound.mp3"); 
+    startgame.play()
 }
