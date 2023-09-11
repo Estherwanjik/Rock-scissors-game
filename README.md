@@ -5,8 +5,7 @@ Credits to
 Credits to
     Museum Expedition 1922, Robert B. Woodward Memorial Fund,
     <a href="https://en.wikipedia.org/wiki/en:Creative_Commons"></a>Creative Commons Attribution 3.0 Unported,
-    https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_22.1275_Club_or_Drumstick.jpg
-
+    https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_22.1275_Club_or_Drumstick.jpg,
     for the wooden club image.
 
 Credits to
