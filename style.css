@@ -1,8 +1,12 @@
-
+ 
  html {
-    background-color:brown;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
 
-} 
+}  
 
 /* heading */
 h1 {
@@ -16,21 +20,22 @@ h1 {
 }
 h2 {
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
     font-weight: bold;
     margin: 18px;
     text-align: center;
 }
 h3 {
-    color: black;
+    color: gray;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 50px;
     font-weight: bolder;
-    margin-bottom: 58px;
-    padding-left: 120px;
+    margin-bottom: 50px;
+    padding-left: 190px;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 
 }
    /*  fitting containers */
@@ -39,38 +44,27 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
- 
 }
-.gamecontainer {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
 
-    
+.gamecontainer {
+    display: flex;
+    flex-direction: column; 
 }
+
 .bottomcontainer {
     justify-content: center;
     align-items: center;
     display: flex;
-    flex-direction: column;
-  
+    flex-direction: column; 
 }
 
 /* outputs:playerscore,computerscore,finalscore */
-#finalResults {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 100px;
-    text-align: center;
-  
 
-}
 .box {
    display: flex; 
    flex-direction: row;
-   gap: 50px;
+   gap: 250px;
+    padding-left: 150px;  
   
 }
 .player {
@@ -86,13 +80,14 @@ h3 {
     display: flex;
     font-weight: bold;
     font-size: 28px;
+    padding-right: 130px;
 
 }
 
 .scores {
     font-size: 20px;
     font-weight: bolder;
-    width: 250px;
+    width: 50px;
     height: 50px;
     display: flex;
     justify-content: center;
@@ -104,38 +99,15 @@ h3 {
 }
 
 .optionButton button {
-    background-color: rosybrown;
-    border: 5px solid darkblue;
-    width: 200px;
-    height: 50px;
-    font-size: 30px;
-    font-weight: bold;
-    color: black;
     margin-bottom: 30px;
-    transition:all 0.89s ease-in; 
-    padding:auto;
-    justify-content: center;
-    align-items: center;
-    transform: translate(1%, -1%);
-    margin-left: 60px;
-
-}
-
-
-#reset {
-    width: 200px;
-    height: 120px;
+    transform: translate(1%, -1%); 
+    margin-left: 100px;
+    border: 2px solid darkblue;
+    background-color: darkblue;
+    transition: 2.7s;
     margin-top: 20px;
-    background-color: rosybrown;
-    color: black;
-    font-size: 50px;
-    border: 3px solid darkblue;
-    justify-content: center;
-    align-items: center;
-     margin-left: 250px; 
-    border-radius: 4cap;
-    
-
+    margin-left: 125px;
+   
 }
 #roundResults {
     display: flex;
@@ -146,10 +118,37 @@ h3 {
     height: 100px;
     width: 150px;
     border: 5px solid darkblue;
-    margin-top: 80px; 
-    margin-left: 300px;
+    margin-top: 40px; 
+    margin-left: 370px;
     background-color: rosybrown;
   
 }
+
+#finalResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    text-align: center;
+    margin-top: 200px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#reset {
+    width: 120px;
+    height: 100px;
+    margin-top: 20px;
+    background-color: rosybrown;
+    color: black;
+    font-size: 30px;
+    border: 3px solid darkblue;
+    justify-content: center;
+    align-items: center;
+    margin-left: 300px; 
+    border-radius: 4cap;
+    
+
+}
+
 
 

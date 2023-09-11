@@ -3,11 +3,11 @@ function getComputerChoice() {
     randomNumber = randomNumber * 3;
     randomNumber = Math.floor(randomNumber);
     if (randomNumber==0) {
-        return "rock"
+        return "rungu"
     }else if (randomNumber==1) {
-        return "paper"
+        return "shield"
     }else{
-        return "scissors";
+        return "spear";
     }
 }
 
@@ -28,7 +28,7 @@ function checkWinner() {
     if (computerScore == 5) {
         hidegamecontainer();
         revealbottomcontainer();
-        finalResults.textContent = 'You lost the game to the computer!';
+        finalResults.textContent = 'You lost the game to the Warrior!';
         finalResults.style.color = 'red';
         optionButton.forEach(button => {
             button.removeEventListener('click', singleRound);
@@ -50,30 +50,30 @@ function resetGame() {
 }
 
 function singleRound(e) {
-    playerSelection = e.target.textContent;
+    playerSelection = this.id;
     console.log(playerSelection)
     computerSelection = getComputerChoice()
     console.log(computerSelection)
     playerSelection = playerSelection.toLowerCase();
 
-    if(computerSelection=="scissors" && playerSelection=="rock") {
+    if(computerSelection=="spear" && playerSelection=="rungu") {
         playerPoints.textContent = ++playerScore;
-        roundResults.textContent = "You Win! Rock beats Scissors";
-    }else if (computerSelection=="scissors" && playerSelection=="paper") {
+        roundResults.textContent = "You Win! Rungu beats Spear";
+    }else if (computerSelection=="spear" && playerSelection=="shield") {
         computerPoints.textContent = ++computerScore;
-        roundResults.textContent = "You lose! Scissors beats Paper";
-    }else if (computerSelection=="paper"&& playerSelection=="rock"){
+        roundResults.textContent = "You lose! Spear beats Shield";
+    }else if (computerSelection=="shield"&& playerSelection=="rungu"){
         computerPoints.textContent = ++computerScore;
-        roundResults.textContent = "You lose! Paper beats Rock";
-    }else if(computerSelection=="paper" && playerSelection=="scissors") {
+        roundResults.textContent = "You lose! Shield beats Rungu";
+    }else if(computerSelection=="shield" && playerSelection=="spear") {
         playerPoints.textContent = ++playerScore;
-        roundResults.textContent = "You win! Scissors beats Paper";
-    }else if(computerSelection=="rock" && playerSelection=="paper"){
+        roundResults.textContent = "You win! Spear beats Shield";
+    }else if(computerSelection=="rungu" && playerSelection=="shield"){
         playerPoints.textContent = ++playerScore;
-        roundResults.textContent = "You win! Paper beats Rock";
-    }else if(computerSelection=="rock" && playerSelection=="scissors"){
+        roundResults.textContent = "You win! Shield beats Rungu";
+    }else if(computerSelection=="rungu" && playerSelection=="spear"){
         computerPoints.textContent = ++computerScore;
-        roundResults.textContent = "You lose! Rock beats Scissors";
+        roundResults.textContent = "You lose! Rungu beats Spear";
     }else {
         roundResults.textContent = "Tie";
     }
@@ -83,10 +83,12 @@ function singleRound(e) {
 async function startGame() {
     hidegamecontainer();
     hidebottomcontainer();
-    writer(0, "Title 1", "Rock Paper Scissors", 100);
+    writer(0, "Title 1", "Rungu Shield Spear", 100);
     await sleep(1700);
     writer(0, "Title 2", "First to  score 5 points wins!", 100);
     await sleep(3000);
+    writer(0, "Title 3", "Do you have what it takes to fight a Maasai warrior??", 100);
+    await sleep(6100)
     hidestartcontainer();
     revealgamecontainer();
     playerPoints.textContent = playerScore;
@@ -101,10 +103,8 @@ async function writer(position, id, text, speed) {
         position++;
         await sleep(speed);
         console.log(position);
-        //setTimeout(writer, speed, position, id, text, speed);
     }
 }
-
 
 function sleep(speed){
     return new Promise((res)=>{
@@ -115,35 +115,25 @@ function hidestartcontainer() {
     const startcontainer = document.querySelector('.startcontainer');
     startcontainer.style.opacity = 0;
     startcontainer.style.transform = 'scale(0)'
-    startcontainer.style.display = 'block';
-   
+    startcontainer.style.display = 'none';
 }  
-
 
 function hidegamecontainer() {
     const gamecontainer = document.querySelector('.gamecontainer');
-     //gamecontainer.style.opacity = 0;
-    //gamecontainer.style.transform = 'scale(0)'; 
     gamecontainer.style.display = 'none';
-    //bottomcontainer.style.display = 'block';
 }
+
 function hidebottomcontainer() {
     const bottomcontainer = document.querySelector('.bottomcontainer');
-    // bottomcontainer.style.opacity = 0;
-     //bottomcontainer.style.transform = 'scale(0)';
     bottomcontainer.style.display = 'none';
 
 }
 function revealgamecontainer() {
     const gamecontainer = document.querySelector('.gamecontainer');
-     //gamecontainer.style.opacity = 0;
-    //gamecontainer.style.transform = 'scale(0)'; 
     gamecontainer.style.display = 'block';
-   
 }
+
 function revealbottomcontainer() {
     const bottomcontainer = document.querySelector('.bottomcontainer');
-    // bottomcontainer.style.opacity = 0;
-     //bottomcontainer.style.transform = 'scale(0)';
     bottomcontainer.style.display = 'block';
 }

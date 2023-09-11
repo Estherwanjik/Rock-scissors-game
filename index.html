@@ -7,33 +7,49 @@
     <meta name="author" content="Dasar">
     <meta name="description" content="A simple game of Rock, Paper, Scissors.">
     <link rel="stylesheet" type="text/css" href="style.css">
-   
+   <style>
+    body {
+        background-image: url("backround2.jpg" );
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+   </style>
 </head>
 <body>
             <div class="startcontainer">
                 <h1 id="Title 1"></h1>
                 <h2 id="Title 2"></h2>
+                <h3 id="Title 3"></h3>
+
             </div>    
   
             <div class="gamecontainer">
                 <div class="box">
                         <div class="player">
-                            <span class="Labels" id="playerLabel">Player scores</span>
+                            <span class="Labels" id="playerLabel">
+                                <img src="Player.jpg" alt="Player" height=200px, witdth=150px></span>
                             <div class="scores" id="playerScore"></div>
                         </div>
 
                         <div class="computer">
                             <div class="scores" id="computerScore"></div>
-                            <span class="Labels" id="computerLabel">Computer scores</span>
+                            <span class="Labels" id="computerLabel">
+                                <img src="Warrior.jpg" alt="Warrior" height=200px, width=150px></span>
                         </div>
                 </div>
                 <h3>Choose Your Weapon!</h3>
 
 
                 <div class="optionButton">
-                    <button id="0">Rock</button>
-                    <button id="1">Paper</button>
-                    <button id="2">Scissors</button>
+                    <button id="Rungu">
+                        <img src="rungu1.jpg" alt="Rungu picture">
+                    </button>
+                    <button id="Shield">
+                        <img src="shield1.jpg" alt="Shield picture">
+                    </button>   
+                    <button id="Spear">  
+                        <img src="spear1.jpg" alt="Spear picture">
+                    </button>
                 </div>
                 <div id="roundResults"></div>
             </div>   
